@@ -5,12 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DAN_LVIII_Milica_Karetic"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"
+        Height="450"
+        Width="800">
     <Grid x:Name="Container">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="31*" />
+            <ColumnDefinition Width="101*" />
+            <ColumnDefinition Width="132*" />
+            <ColumnDefinition Width="132*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -21,38 +24,50 @@
         <Button Click="button_Click"
                 x:Name="button1"
                 Grid.Column="0"
-                Grid.Row="0" />
+                FontSize="80"
+                Grid.Row="0"
+                Grid.ColumnSpan="2" />
         <Button Click="button_Click"
                 x:Name="button2"
-                Grid.Column="1"
+                FontSize="80"
+                Grid.Column="2"
                 Grid.Row="0" />
         <Button Click="button_Click"
                 x:Name="button3"
-                Grid.Column="2"
+                FontSize="80"
+                Grid.Column="3"
                 Grid.Row="0" />
         <Button Click="button_Click"
                 x:Name="button4"
                 Grid.Column="0"
-                Grid.Row="1" />
+                FontSize="80"
+                Grid.Row="1"
+                Grid.ColumnSpan="2" />
         <Button Click="button_Click"
                 x:Name="button5"
-                Grid.Column="1"
+                FontSize="80"
+                Grid.Column="2"
                 Grid.Row="1" />
         <Button Click="button_Click"
                 x:Name="button6"
-                Grid.Column="2"
+                Grid.Column="3"
+                FontSize="80"
                 Grid.Row="1" />
         <Button Click="button_Click"
                 x:Name="button7"
+                FontSize="80"
                 Grid.Column="0"
-                Grid.Row="2" />
+                Grid.Row="2"
+                Grid.ColumnSpan="2" />
         <Button Click="button_Click"
                 x:Name="button8"
-                Grid.Column="1"
+                FontSize="80"
+                Grid.Column="2"
                 Grid.Row="2" />
         <Button Click="button_Click"
                 x:Name="button9"
-                Grid.Column="2"
+                FontSize="80"
+                Grid.Column="3"
                 Grid.Row="2" />
         <!--buttons-->
     </Grid>
