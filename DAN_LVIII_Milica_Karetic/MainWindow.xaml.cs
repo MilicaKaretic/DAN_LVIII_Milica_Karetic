@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DAN_LVIII_Milica_Karetic
 {
@@ -20,18 +10,27 @@ namespace DAN_LVIII_Milica_Karetic
     /// </summary>
     public partial class MainWindow : Window
     {
+        //game instance
         private Game game;
 
+        /// <summary>
+        /// Main window constructor
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
             game = new Game();
 
-            newGame();
+            //start new game
+            NewGame();
         }
 
-        private void newGame()
+        /// <summary>
+        /// New game method
+        /// </summary>
+        private void NewGame()
         {
+            //initialize empty board
             game.InitialBoard();
 
             Container.Children.Cast<Button>().ToList().ForEach(button =>
@@ -46,7 +45,6 @@ namespace DAN_LVIII_Milica_Karetic
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        /// 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             var button = (Button)sender;
@@ -72,19 +70,19 @@ namespace DAN_LVIII_Milica_Karetic
                     button.Content = 'X';
                     game.PlayerTurn = false;
                 }
-                game.getWinner(Game.SpotState.X);
+                game.GetWinner(Game.SpotState.X);
             }
 
             //if it is computer's turn
             if (!game.PlayerTurn && game.GameState)
             {
                 var btn = Container.Children.Cast<Button>().ToArray();
-                var index = game.computerPlay();
+                var index = game.ComputerPlay();
                 btn[index].Content = 'O';
 
                 game.spotValues[index] = Game.SpotState.O;
                 game.PlayerTurn = true;
-                game.getWinner(Game.SpotState.O);
+                game.GetWinner(Game.SpotState.O);
             }
 
             if (game.GameState != true)
@@ -99,7 +97,7 @@ namespace DAN_LVIII_Milica_Karetic
                         btn[game.winSegments[i]].Background = Brushes.Green;
                     }
                     MessageBox.Show(game.winner.ToString() + " won!");
-                    this.newGame();
+                    NewGame();
                 }
 
                 if (game.winner == Game.IdentifyWinner.draw)
@@ -110,7 +108,7 @@ namespace DAN_LVIII_Milica_Karetic
                     });
 
                     MessageBox.Show("It's " + game.winner.ToString());
-                    this.newGame();
+                    NewGame();
                 }
 
 

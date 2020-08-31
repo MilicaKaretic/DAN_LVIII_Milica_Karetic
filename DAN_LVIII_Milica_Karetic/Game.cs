@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAN_LVIII_Milica_Karetic
 {
@@ -85,7 +81,7 @@ namespace DAN_LVIII_Milica_Karetic
         /// computer playing
         /// </summary>
         /// <returns></returns>
-        public int computerPlay()
+        public int ComputerPlay()
         {
 
             int index = 0;
@@ -115,7 +111,7 @@ namespace DAN_LVIII_Milica_Karetic
         /// <summary>
         /// Checks if someone won
         /// </summary>
-        public void checkGameState()
+        public void CheckGameState()
         {
             if (winner == IdentifyWinner.NULL)
             {
@@ -142,11 +138,11 @@ namespace DAN_LVIII_Milica_Karetic
         /// Get winner of game
         /// </summary>
         /// <param name="tempstate"></param>
-        public void getWinner(SpotState spotstate)
+        public void GetWinner(SpotState spotstate)
         {
             if (GameState != false)
             {
-                getWin(spotstate);
+                GetWin(spotstate);
 
                 if (foundWinPattern)
                 {
@@ -157,7 +153,7 @@ namespace DAN_LVIII_Milica_Karetic
                         winner = IdentifyWinner.computer;
                 }
 
-                checkGameState();
+                CheckGameState();
             }
 
         }
@@ -268,7 +264,7 @@ namespace DAN_LVIII_Milica_Karetic
         /// chechs if someone win
         /// </summary>
         /// <param name="boxState"></param>
-        private void getWin(SpotState boxState)
+        private void GetWin(SpotState boxState)
         {
 
             #region Horizontalcheck
