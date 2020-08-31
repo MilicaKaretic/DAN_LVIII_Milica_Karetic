@@ -6,7 +6,54 @@
         xmlns:local="clr-namespace:DAN_LVIII_Milica_Karetic"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid x:Name="Container">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!--buttons-->
+        <Button Click="button_Click"
+                x:Name="button1"
+                Grid.Column="0"
+                Grid.Row="0" />
+        <Button Click="button_Click"
+                x:Name="button2"
+                Grid.Column="1"
+                Grid.Row="0" />
+        <Button Click="button_Click"
+                x:Name="button3"
+                Grid.Column="2"
+                Grid.Row="0" />
+        <Button Click="button_Click"
+                x:Name="button4"
+                Grid.Column="0"
+                Grid.Row="1" />
+        <Button Click="button_Click"
+                x:Name="button5"
+                Grid.Column="1"
+                Grid.Row="1" />
+        <Button Click="button_Click"
+                x:Name="button6"
+                Grid.Column="2"
+                Grid.Row="1" />
+        <Button Click="button_Click"
+                x:Name="button7"
+                Grid.Column="0"
+                Grid.Row="2" />
+        <Button Click="button_Click"
+                x:Name="button8"
+                Grid.Column="1"
+                Grid.Row="2" />
+        <Button Click="button_Click"
+                x:Name="button9"
+                Grid.Column="2"
+                Grid.Row="2" />
+        <!--buttons-->
     </Grid>
 </Window>
